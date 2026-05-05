@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colourdist"
+version = "0.1.0"
+description = "Colour-difference metrics (CIE76, CIE94, CIEDE2000) plus sRGB ↔ XYZ ↔ Lab conversions, pure Python."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "nripankadas07" }]
+keywords = ["colour", "color", "cie", "deltaE", "lab", "ciede2000"]
+classifiers = ["Development Status :: 4 - Beta", "License :: OSI Approved :: MIT License"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/nripankadas07/colourdist"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+colourdist = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
