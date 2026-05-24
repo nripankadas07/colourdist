@@ -1,5 +1,4 @@
 """Tests for colourdist."""
-import math
 import pytest
 from colourdist import (
     ColourDistError, delta_e_2000, delta_e_76, delta_e_94,
